@@ -10,21 +10,21 @@ var apos = require('apostrophe')({
       viewsFolderFallback: path.join(__dirname, 'views')
     },
 
-    'apostrophe-elasticsearch': {
-      baseName: 'test-elasticsearch',
-      elasticsearchOptions: {
-        host: 'localhost:9200'
-      },
-      //if you uncomment this line and run reindex, the search work
-      // fields: ['title', 'description', 'lowSearchText', 'highSearchText', 'type'],
-      fields: ['title', 'description', 'lowSearchText', 'highSearchText'],
-      boosts: {
-        description: 100,
-        title: 80,
-        highSearchText: 1,
-        lowSearchText: 1
-      }
-    },
+    // 'apostrophe-elasticsearch': {
+    //   baseName: 'test-elasticsearch',
+    //   elasticsearchOptions: {
+    //     host: 'localhost:9200'
+    //   },
+    //   //if you uncomment this line and run reindex, the search work
+    //   fields: ['title', 'description', 'lowSearchText', 'highSearchText', 'type'],
+    //   // fields: ['title', 'description', 'lowSearchText', 'highSearchText'],
+    //   boosts: {
+    //     description: 100,
+    //     title: 80,
+    //     highSearchText: 1,
+    //     lowSearchText: 1
+    //   }
+    // },
     'apostrophe-search': {
       types: [
         'type0',
@@ -43,6 +43,9 @@ var apos = require('apostrophe')({
       }]
     },
     'type0': {},
+    'type0-widgets': {
+      extend: 'apostrophe-pieces-widgets'
+    },
     'type1': {},
     'type2': {}
 
