@@ -47,7 +47,10 @@ var apos = require('apostrophe')({
       extend: 'apostrophe-pieces-widgets'
     },
     'type1': {},
-    'type2': {}
+    'type2': {},
+    'statoChiusura':{},
+    'statoApertura':{},
+    'amministrazioni':{}
 
   }
 });
