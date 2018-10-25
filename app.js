@@ -46,6 +46,9 @@ var apos = require('apostrophe')({
     'type0-widgets': {
       extend: 'apostrophe-pieces-widgets'
     },
+    'apostrophe-workflow': {
+      alias: 'workflow'
+    },
     'type1': {},
     'type2': {},
     'statoChiusura':{},
